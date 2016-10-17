@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <!---->
+    <servlet>
+        <!--配置类的别名-->
+        <servlet-name>Student</servlet-name>
+        <!--配置类的路径-->
+        <servlet-class>com.huang.web.StudentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <!--配置类的别名-->
+        <servlet-name>Studentajax</servlet-name>
+        <!--配置类的路径-->
+        <servlet-class>com.huang.web.StudentAjax</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <!--配置类的别名和访问路径，别名是自定义的，但别名要和上方的别名一致-->
+        <servlet-name>Student</servlet-name>
+        <!--访问路径，可以自定义，但必须以斜杠开头，斜杠代表了项目的根目录-->
+        <url-pattern>/tblstudent.html</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <!--配置类的别名和访问路径，别名是自定义的，但别名要和上方的别名一致-->
+        <servlet-name>Studentajax</servlet-name>
+        <!--访问路径，可以自定义，但必须以斜杠开头，斜杠代表了项目的根目录-->
+        <url-pattern>/student.html</url-pattern>
+    </servlet-mapping>
+</web-app>
